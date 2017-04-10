@@ -1,8 +1,6 @@
 
 #!/usr/bin/python
 
-print "helllo"
-
 #coding=utf-8
 import urllib
 
@@ -13,4 +11,4 @@ def getHtml(url):
 
 html = getHtml("http://www.runoob.com/python/python-tutorial.html")
 
-print html
+print (html)
