@@ -1,0 +1,7 @@
+add a new build system running  when you type ctrl+b in sublime 
+
+{
+ "cmd": ["/usr/bin/python3", "-u", "$file"],
+  "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+   "selector": "source.python" 
+}
