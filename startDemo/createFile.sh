@@ -16,6 +16,8 @@ touch $num.$filename.py
 
 echo "#!/usr/bin/python3" > $num.$filename.py
 
+chmod 777 $num.$filename.py
+
 echo $(( num + 1 )) > filenumber.txt
 
 

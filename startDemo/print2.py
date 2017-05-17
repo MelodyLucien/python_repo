@@ -28,11 +28,3 @@ print (str[0:2])
 print (str[:-1])
 print (str[2])
 print (str[-4:-1])
-#List  note :list have many built-in functions
-list = [2,3,"zh",3.4,5+7j]
-print (list)
-print (list[2])
-print (list[2:4])
-print (list*2)
-list[1]="3str"
-print (list[-1])
