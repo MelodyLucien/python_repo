@@ -17,13 +17,8 @@ print(a.minus(b))
 
 
 
-
 #3
 
 a = Vector([1.671,-1.012,-0.318])
 
 print(a.multiScalar(7.41))
-
-
-
- 

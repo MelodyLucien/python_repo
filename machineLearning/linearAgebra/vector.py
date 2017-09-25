@@ -22,67 +22,16 @@ class Vector:
         return self.coordinates == v.coordinates
 
     def multiScalar(self,v):
-        try:
-            if isinstance(v,float): 
-                print("i am float")
-            else:
-                raise ValueError
-
-            length=len(self.coordinates)
-            tmpList = []
-            for i in range(0,length):
-               tmpList.append(self.coordinates[i] * v)
-
-            print (tmpList)
-
-        except ValueError:
-            raise ValueError('The lengths are not same ')
+        new_coordinates = [x*v for x in self.coordinates ]
+        return new_coordinates
 
 
     def minus(self,v):
-        try:
-            if not v:
-                raise TypeError
-                
-            l1 = len(self.coordinates)
-            l2 = len(v.coordinates)
-
-            if l1 != l2 :
-                raise ValueError
-
-            tmpList = []
-            for i in range(0,l1):
-               tmpList.append(self.coordinates[i] - v.coordinates[i])
-
-            print (tmpList)
-
-        except ValueError:
-            raise ValueError('The lengths are not same ')
-
-        except TypeError:
-            raise TypeError('The coordinates must be an iterable')
+        new_coordinates = [x-y for x,y in zip(self.coordinates,v.coordinates)]
+        return new_coordinates
 
 
 
     def plus(self,v):
-        try:
-            if not v:
-                raise TypeError
-                
-            l1 = len(self.coordinates)
-            l2 = len(v.coordinates)
-
-            if l1 != l2 :
-                raise ValueError
-
-            tmpList = []
-            for i in range(0,l1):
-               tmpList.append(self.coordinates[i] + v.coordinates[i])
-
-            print (tmpList)
-
-        except ValueError:
-            raise ValueError('The lengths are not same ')
-
-        except TypeError:
-            raise TypeError('The coordinates must be an iterable')
+        new_coordinates = [x+y for x,y in zip(self.coordinates,v.coordinates)]
+        return new_coordinates
