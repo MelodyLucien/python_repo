@@ -10,9 +10,14 @@ update = tf.assign(state, new_value)
 
 init_op = tf.initialize_all_variables()
 
+print "start print result"
+
 with tf.Session() as sess:
   sess.run(init_op)
   print sess.run(state)
-  for _ in range(3):
+  for _ in range(20):
     sess.run(update)
     print sess.run(state)
+
+
+print "i am ok"
